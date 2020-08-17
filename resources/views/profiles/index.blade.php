@@ -11,15 +11,18 @@
         </div>
         
         <div class="col-sm-7">
-            <div><h1>{{$user->username}}</h1></div>
+            <div class="d-flex justify-content-between alig-items-baseline">
+                <h1>{{$user->username}}</h1>
+                 <a href="#">Add post</a>
+            </div>
             <div class="d-flex">
             <div class="pr-5"><strong>6,395</strong> posts </div>
             <div class="pr-5"><strong>356m</strong> followers</div>
             <div class="pr-5"><strong>44</strong> following </div>
             </div>
-            <div class="pt-4"><strong>Instagram</strong></div>
-            <div><h5>#shareblackstories</h5></div>
-            <div><a href="facebook.com">facebook.com</a></div>
+            <div class="pt-4"><strong>{{$user->profile->title}}</strong></div>
+            <div><h5>{{$user->profile->description}}</h5></div>
+            <div><a href="#">{{$user->profile->url}}</a></div>
         </div>
 
     </div>
